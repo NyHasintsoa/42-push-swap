@@ -15,7 +15,7 @@ The project challenges developers to:
 
 ### Overview
 
-The program takes a list of integers as input and outputs a sequence of operations (push, swap, rotate, reverse rotate) that sorts the numbers in ascending order. The project includes multiple strategy implementations that adapt based on the level of disorder in the input data, ranging from simple bubble-like operations to complex chunk-based sorting.
+The program takes a list of integers as input and outputs a sequence of operations (push, swap, rotate, reverse rotate) that sorts the numbers in ascending order. The project includes multiple strategy implementations that adapt based on the level of disorder in the input data, from simple to complex chunk-based sorting.
 
 ---
 
@@ -305,7 +305,7 @@ Chunk-based sorting reduces unnecessary rotations by:
 - Allowing parallel operations on both stacks
 - Scaling better with larger datasets
 
-### Why Doubly-Linked Stack?
+### Why Double-Linked Stack?
 
 Implemented with both `next` and `prev` pointers to:
 

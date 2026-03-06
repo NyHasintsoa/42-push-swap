@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_bench.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: karatsar <karatsar@student.42antananari    +#+  +:+       +#+        */
+/*   By: nramalan <nramalan@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/26 07:30:25 by nramalan          #+#    #+#             */
-/*   Updated: 2026/03/06 13:50:09 by karatsar         ###   ########.fr       */
+/*   Updated: 2026/03/06 16:10:53 by nramalan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,15 +66,17 @@ static void	ft_print_class(t_options opts)
 static void	ft_print_bench_summary(t_options opts)
 {
 	char	*disorder;
+	float	disorder_value;
 
+	disorder_value = opts.bench->disorder * 100;
 	ft_putstr_fd("[bench] disorder:   ", 2);
-	if (opts.bench->disorder < 100)
+	if (disorder_value < 100)
 	{
-		disorder = ft_format_disorder(opts.bench->disorder);
+		disorder = ft_format_disorder(disorder_value);
 		ft_putstr_fd(disorder, 2);
 		free(disorder);
 	}
-	else if (opts.bench->disorder == 100)
+	else if (disorder_value == 100)
 		ft_putstr_fd("100%", 2);
 	ft_putstr_fd("\n[bench] strategy:   ", 2);
 	ft_print_strategy(opts.strategy);
